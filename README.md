@@ -50,6 +50,8 @@ map GET_validation(string GSTIN)
    	return response;
 }
 ```
+[Link to Sample Deluge Function](GST_Validation.dg)
+
 ### Step 4 -
 Now You can call the function with the String Value passed as "GSTIN", so that you the deluge code can validate the same and return the values.
 
