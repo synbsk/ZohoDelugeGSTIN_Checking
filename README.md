@@ -56,7 +56,7 @@ Now You can call the function with the String Value passed as "GSTIN", so that y
 ## Additional Requirements:
 You can make some optional additions to the existing function, like
 
-### 1. Extracting PAN Number from the GSTIN Number
+### 1. Extracting Indian PAN Number from the GSTIN Number using Deluge, Zoho Functions
 You can add the below line, to get PAN number in the added response map
 
 ```
