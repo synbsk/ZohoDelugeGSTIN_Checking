@@ -52,3 +52,13 @@ map GET_validation(string GSTIN)
 ```
 ### Step 4 -
 Now You can call the function with the String Value passed as "GSTIN", so that you the deluge code can validate the same and return the values.
+
+## Additional Requirements:
+You can make some optional additions to the existing function, like
+
+### 1. Extracting PAN Number from the GSTIN Number
+You can add the below line, to get PAN number in the added response map
+
+```
+response.put('PAN',GSTIN.subString(2,12));
+```
