@@ -1,6 +1,6 @@
 # Indian GSTIN Check Using Zoho Deluge
 
->How to do Proper Indian GSTIN Number Validation using Deluge Function in ZohoHow to do Proper Indian GSTIN Number Validation using Deluge Function in Zoho
+>How to do Proper Indian GSTIN Number Validation using Deluge Function in Zoho
 
 Hi, This is Sayan.
 
@@ -15,9 +15,9 @@ This code can be helpful in the below scenarios:
 
 ## To create the validation:
 ### Step 1 -
-Create a Workflow upon which the Function should be called with proper conditions, and make sure to pass the GSTIN Input which will be checked for validation
+Create a Workflow upon which the Function should be called with proper conditions, and make sure to pass the "GSTIN" as String Input which will be checked for validation
 ### Step 2 -
-Use Map(); as the return value so that this Function can return more data in future
+Use Map(); as the return value so that this Function can return more data in future, as per requirements arise.
 ### Step 3 -
 Paste the below Code in the Function:
 ```
@@ -27,14 +27,14 @@ map GET_validation(string GSTIN)
    	response = Map();
    	if(GSTIN.isNull())
    	{
-   		response.put('status','Failed');
+   		response.put('status','failed');
    		response.put('message','The GSTIN field cannot be left Empty');
    	}
    	else
    	{
    		if(GSTIN.length() != 15)
    		{
-   			response.put('status','Failed');
+   			response.put('status','failed');
    			response.put('message','The GSTIN entered must be 15 Characters');
    		}
    		else if(GSTIN.length() == 15 && format == true)
@@ -43,7 +43,7 @@ map GET_validation(string GSTIN)
    		}
    		else
    		{
-   			response.put('status','Failed');
+   			response.put('status','failed');
    			response.put('message','Please enter a valid GSTIN number');
    		}
    	}
@@ -53,7 +53,7 @@ map GET_validation(string GSTIN)
 [Link to Sample Deluge Function](GST_Validation.dg)
 
 ### Step 4 -
-Now You can call the function with the String Value passed as "GSTIN", so that you the deluge code can validate the same and return the values.
+Now You can call the function with the String Value passed as "GSTIN", so that the deluge code can validate the same and return the values.
 
 ## Additional Requirements:
 You can make some optional additions to the existing function, like

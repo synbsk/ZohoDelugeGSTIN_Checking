@@ -4,14 +4,14 @@ map GET_validation(string GSTIN)
    	response = Map();
    	if(GSTIN.isNull())
    	{
-   		response.put('status','Failed');
+   		response.put('status','failed');
    		response.put('message','The GSTIN field cannot be left Empty');
    	}
    	else
    	{
    		if(GSTIN.length() != 15)
    		{
-   			response.put('status','Failed');
+   			response.put('status','failed');
    			response.put('message','The GSTIN entered must be 15 Characters');
    		}
    		else if(GSTIN.length() == 15 && format == true)
@@ -20,7 +20,7 @@ map GET_validation(string GSTIN)
    		}
    		else
    		{
-   			response.put('status','Failed');
+   			response.put('status','failed');
    			response.put('message','Please enter a valid GSTIN number');
    		}
    	}
